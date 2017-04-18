@@ -40,7 +40,7 @@ public class ValueActivity extends AppCompatActivity {
                         ParticleDevice device = ParticleCloud.getDevice(getIntent().getStringExtra(ARG_DEVICEID));
                         Object variable;
                         try {
-                            variable = device.getVariable("analogvalue");
+                            variable = device.getVariable("analogvalue2");
                         } catch (ParticleDevice.VariableDoesNotExistException e) {
                             Toaster.l(ValueActivity.this, e.getMessage());
                             variable = -1;

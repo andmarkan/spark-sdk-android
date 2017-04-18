@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
                         final String password = ((EditText) findViewById(R.id.password)).getText().toString();
 
                         // Don't:
-                        AsyncTask task = new AsyncTask() {
+                   /*     AsyncTask task = new AsyncTask() {
                             @Override
                             protected Object doInBackground(Object[] params) {
                                 try {
@@ -55,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
 
                         };
+                        */
 //                        task.execute();
 
                         //-------
@@ -68,18 +69,18 @@ public class LoginActivity extends AppCompatActivity {
                             public Object callApi(ParticleCloud sparkCloud) throws ParticleCloudException, IOException {
                                 sparkCloud.logIn(email, password);
                                 sparkCloud.getDevices();
-                                mDevice = sparkCloud.getDevice("1f0034000747343232361234");
+                                mDevice = sparkCloud.getDevice("370043000a47343337373738");
                                 Object obj;
 
                                 try {
-                                    obj = mDevice.getVariable("analogvalue");
+                                    obj = mDevice.getVariable("analogvalue2");
                                     Log.d("BANANA", "analogvalue: " + obj);
                                 } catch (ParticleDevice.VariableDoesNotExistException e) {
                                     Toaster.s(LoginActivity.this, "Error reading variable");
                                     obj = -1;
                                 }
 
-                                try {
+                              /*  try {
                                     String strVariable = mDevice.getStringVariable("stringvalue");
                                     Log.d("BANANA", "stringvalue: " + strVariable);
                                 } catch (ParticleDevice.VariableDoesNotExistException e) {
@@ -99,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                                 } catch (ParticleDevice.VariableDoesNotExistException e) {
                                     Toaster.s(LoginActivity.this, "Error reading variable");
                                 }
-
+*/
                                 return -1;
 
                             }

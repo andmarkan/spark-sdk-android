@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.2'
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         applicationId "io.particle.cloudsdk.example_app"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -32,15 +32,15 @@ dependencies {
     // BY DEFAULT, BUILD APP AGAINST THE LOCAL SDK SOURCE
     // (i.e.: make modifications to the SDK source in the local repo show up in this app
     // just by rebuilding)
-    compile project(':cloudsdk')
+    //compile project(':cloudsdk')
     //
     // **OR**
     //
     // comment out the above, and
     // UNCOMMENT THE FOLLOWING TO USE A PUBLISHED VERSION OF THE SDK:
-    //    compile 'io.particle:cloudsdk:0.3.3'
+     compile 'io.particle:cloudsdk:0.3.3'
 
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:support-v4:25.0.1'
 }
 
